@@ -29,5 +29,16 @@ namespace CloudLab2.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet]
+        public IEnumerable<WeatherProbability> GetProbabilities()
+        {
+            return new List<WeatherProbability>
+            {
+                new WeatherProbability { Condition = "Rain", Probability = 0.3f },
+                new WeatherProbability { Condition = "Snow", Probability = 0.1f },
+                new WeatherProbability { Condition = "Sunny", Probability = 0.6f }
+            };
+        }
     }
 }
